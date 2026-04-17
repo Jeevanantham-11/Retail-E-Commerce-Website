@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Force light color scheme to prevent OS dark mode overrides pulling black backgrounds */
+:root {
+  color-scheme: light;
+}
+
+body {
+  /* Force clean professional light aesthetic */
+  background-color: #f8fafc; /* bg-slate-50 */
+  color: #0f172a; /* text-slate-900 */
+}
