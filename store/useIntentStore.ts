@@ -43,7 +43,7 @@ export const useIntentStore = create<IntentState>()(
 
           return {
             scores: newScores,
-            history: [...state.history, { type: "search", value: query, timestamp: Date.now() }].slice(-20) // keep last 20
+            history: [...state.history, { type: "search" as const, value: query, timestamp: Date.now() }].slice(-20) // keep last 20
           };
         });
         get().calculateDominantIntent();
@@ -65,7 +65,7 @@ export const useIntentStore = create<IntentState>()(
 
           return {
             scores: newScores,
-            history: [...state.history, { type: "click", value: productId, timestamp: Date.now() }].slice(-20)
+            history: [...state.history, { type: "click" as const, value: productId, timestamp: Date.now() }].slice(-20)
           };
         });
         get().calculateDominantIntent();
